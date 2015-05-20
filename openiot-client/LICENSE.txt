@@ -176,9 +176,9 @@ EXHIBIT A. Common Public Attribution License Version 1.0.
 
 EXHIBIT B. Attribution Information
 
-    Attribution Copyright Notice: Copyright (c) OpenIoT, LLC.
+    Attribution Copyright Notice: Copyright (c) SiteWhere, LLC.
 
-    Attribution Phrase (not exceeding 10 words): Powered by OpenIoT
+    Attribution Phrase (not exceeding 10 words): Powered by SiteWhere
 
     Attribution URL: http://www.sitewhere.com
 
