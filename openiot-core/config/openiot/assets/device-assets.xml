@@ -1,0 +1,163 @@
+<!--
+  ~ Copyright (c) SiteWhere, LLC. All rights reserved. http://www.sitewhere.com
+  ~
+  ~ The software in this package is published under the terms of the CPAL v1.0
+  ~ license, a copy of which has been included with this distribution in the
+  ~ LICENSE.txt file.
+  -->rdware-assets>
+	<!-- Android -->
+	<hardware-asset id="173" name="Galaxy Tab 3" sku="GTAB3" device="true">
+		<description> 这种超薄，超轻的Android平板电脑拥有7英寸的触摸显示屏，以及同样熟悉的界面与其他三星Galaxy设备，使得它易于使用。使用它可以快速地浏览网页，看电影，看播放电子书，或者从谷歌下载应用程序。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/misc/android-logo.png</image-url>
+		<property name="manufacturer" value="Samsung"/>
+		<property name="cpu" value="Dual Core Application Processor "/>
+		<property name="sd.size" value="1gb"/>
+	</hardware-asset>
+
+	<!-- Raspberry Pi -->
+	<hardware-asset id="174" name="Raspberry Pi" sku="RPI" device="true">
+		<description>树莓派(Raspberry Pi)由英国树莓派基金会为了促进计算机基础科学的教学开发的一款信用卡大小的单板计算机。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/misc/raspberry-pi.jpg</image-url>
+		<property name="manufacturer" value="Raspberry Pi Foundation"/>
+		<property name="cpu" value="ARM1176JZF-S"/>
+		<property name="sd.size" value="32gb"/>
+	</hardware-asset>
+	
+	<!-- MeiTrack personal trackers -->
+	<hardware-asset id="175" name="MeiTrack MT90" sku="MT90" device="true">
+		<description>MT90是一款适用于独立工作者，儿童，老人，宠物，资产，汽车或者车队的防水GPS定位设备。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/meitrack/mt90.jpg</image-url>
+		<property name="manufacturer" value="MeiTrack"/>
+		<property name="weight" value="1.000"/>
+		<property name="sos.button" value="true"/>
+		<property name="two.way.audio" value="false"/>
+	</hardware-asset>
+	
+	<!-- Gateway -->
+	<hardware-asset id="176" name="现场物联网网关" sku="GW1" device="true">
+		<description>现场物联网网关范例设备，支持设备嵌套。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/misc/gateway.gif</image-url>
+		<property name="manufacturer" value="Advantech"/>
+	</hardware-asset>
+	
+	<!-- Arduino -->
+	<hardware-asset id="180" name="Arduino Uno" sku="UNO" device="true">
+		<description>The Arduino Uno是一款微控制器开发板，基于ATmega328芯片。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/arduino/uno.jpg</image-url>
+		<property name="manufacturer" value="Arduino"/>
+		<property name="operating.voltage" value="5V"/>
+	</hardware-asset>
+	<hardware-asset id="181" name="Arduino Mega 2560" sku="M2560" device="true">
+		<description>The Arduino Mega 2560是一款微控制器开发板，基于ATmega2560芯片。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/arduino/mega2560.jpg</image-url>
+		<property name="manufacturer" value="Arduino"/>
+		<property name="operating.voltage" value="5V"/>
+	</hardware-asset>
+	<hardware-asset id="185" name="Arduino Yun" sku="YUN" device="true">
+		<description>The Arduino Yún(Arduino云)是一款微控制器开发板，基于ATmega32u4和Atheros AR9331芯片.</description>
+		<image-url>https://publicblob.blob.core.chinacloudapi.cn/blob1/ArduinoYun.jpg</image-url>
+		<property name="manufacturer" value="Arduino"/>
+		<property name="operating.voltage" value="5V"/>
+		<property name="cpu" value="Atheros AR9331 MIPS @400MHz "/>
+		<property name="memory" value="64MByte DDR2 ram"/>
+		<property name="flash" value="16MByte rom"/>
+		<property name="os" value="OpenWrt Linino"/>
+	</hardware-asset>
+
+	<!-- WRTnode -->
+	<hardware-asset id="190" name="WRTnode" sku="WRTNODE" device="true">
+		<description>WRTnode是一款配备了高性能CPU，低功耗，廉价的小型开发板，能够运行OpenWRT操作系统，能够很容易的移植运行所有基于Linux的开源软件。</description>
+		<image-url>https://publicblob.blob.core.chinacloudapi.cn/blob1/WRTnode.jpg</image-url>
+		<property name="manufacturer" value="WRTnode"/>
+		<property name="operating.voltage" value="5V"/>
+		<property name="cpu" value="MTK MT7620N 600MHz MIPS CPU (MIPS24KEc)"/>
+		<property name="memory" value="64MByte DDR2 ram"/>
+		<property name="flash" value="16MByte rom"/>
+		<property name="os" value="OpenWrt BARRIER BREAKER (Bleeding Edge, r41508)"/>
+	</hardware-asset>
+
+    <!-- Gokit -->
+    <hardware-asset id="195" name="GoKit" sku="GOKIT" device="true">
+        <description>GoKit是机智云新推出的智能硬件开发板，用于帮助开发者快速实现智能硬件的原型开发，开发者只需扫码就可以连接机智云2.0并直接控制设备。GoKit上集成了马达、1600万色的LED、Wifi模块、红外光感、温湿度等传感器。</description>
+        <image-url>https://publicblob.blob.core.chinacloudapi.cn/blob1/gokit.png</image-url>
+        <property name="manufacturer" value="机智云"/>
+    </hardware-asset>
+
+    <!-- uARM -->
+    <hardware-asset id="198" name="uARM机械臂" sku="UARM" device="true">
+        <description>uArm 是一款桌面级四轴开源机迷你械臂，其灵感来自于ABB码垛机械人IRB460。团队将机械臂的价格做到了“消费级”，尺寸都做到了“桌面级”。</description>
+        <image-url>http://publicblob.blob.core.chinacloudapi.cn/blob1/uarm.jpg</image-url>
+        <property name="manufacturer" value="uARM"/>
+    </hardware-asset>
+
+
+	<!-- Ekahau tags and sensors -->
+	<hardware-asset id="200" name="Ekahau A4标签" sku="EA4" device="true">
+		<description>A4 Wi-Fi标签，作为微型计算设备，能够将数据传输到Ekahau Vision服务器以确定资产的位置和状态，并在Vision软件界面上展示。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/ekahau/ekahau-a4-tag.jpg</image-url>
+		<property name="manufacturer" value="Ekahau"/>
+		<property name="wifi" value="true"/>
+		<property name="programmable.buttons" value="true"/>
+		<property name="remote.audio" value="true"/>
+		<property name="wearable" value="false"/>
+		<property name="senses.temperature" value="false"/>
+	</hardware-asset>
+	<hardware-asset id="201" name="Ekahau B4标签" sku="EB4" device="true">
+		<description>B4标签为工作人员提供一个一体化的用于受胁迫或紧急事件情况下的开关 - 员工只需要拉动标签，他们的位置和警报就会发送到安保机构和其他指定的团体。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/ekahau/ekahau-b4-tag.jpg</image-url>
+		<property name="manufacturer" value="Ekahau"/>
+		<property name="wifi" value="true"/>
+		<property name="programmable.buttons" value="true"/>
+		<property name="remote.audio" value="false"/>
+		<property name="wearable" value="true"/>
+		<property name="senses.temperature" value="false"/>
+	</hardware-asset>
+	<hardware-asset id="202" name="Ekahau T301W可穿戴标签" sku="ET301W" device="true">
+		<description>T301W是一款防水可穿戴标签，包含两个彩色LED可向标签所属设备发送信号，还具备震动告警功能。病人可以接收来电或者按下呼叫按钮请求帮助。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/ekahau/ekahau-t301w-wearable-tag.jpg</image-url>
+		<property name="manufacturer" value="Ekahau"/>
+		<property name="wifi" value="true"/>
+		<property name="programmable.buttons" value="false"/>
+		<property name="remote.audio" value="false"/>
+		<property name="wearable" value="true"/>
+		<property name="senses.temperature" value="false"/>
+	</hardware-asset>
+	<hardware-asset id="203" name="Ekahau无线TS1温度传感器" sku="ETS1" device="true">
+		<description>轻量级的TS1温度标签能够探测并传输从-80° C到+ 125° C范围的温度, 并自定义告警温度范围。TS1传感器板载一个可编程的蜂鸣器和带LED警告灯的按钮。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/ekahau/ekahau-ts1.jpg</image-url>
+		<property name="manufacturer" value="Ekahau"/>
+		<property name="wifi" value="true"/>
+		<property name="senses.temperature" value="true"/>
+		<property name="senses.humidity" value="false"/>
+	</hardware-asset>
+	<hardware-asset id="204" name="Ekahau无线TS2温度传感器" sku="ETS2" device="true">
+		<description>TS2双温度传感器标签可以用同一个传感器监控来自两个独立的探头的数据，从而降低部署的总成本。温度传感器标签本身始终保持在极端温度下方便维护和更好的网络连接之外。在网络中断情况下，则Ekahau公司的TS标签可以在本地存储的温度测度，并在网络恢复后自动提供测度。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/ekahau/ekahau-ts1.jpg</image-url>
+		<property name="wifi" value="true"/>
+		<property name="senses.temperature" value="true"/>
+		<property name="senses.humidity" value="false"/>
+	</hardware-asset>
+	<hardware-asset id="205" name="Ekahau HS1湿度传感器" sku="EHS1" device="true">
+		<description>The Ekahau HS1湿度标签可以自动测量和监控周边环境的温度和相对湿度。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/ekahau/ekahau-humidity-sensor.jpg</image-url>
+		<property name="manufacturer" value="Ekahau"/>
+		<property name="wifi" value="true"/>
+		<property name="senses.temperature" value="false"/>
+		<property name="senses.humidity" value="true"/>
+	</hardware-asset>
+	
+	<!-- Laipac -->
+	<hardware-asset id="300" name="S911手环定位器" sku="S911HC" device="true">
+		<description>S911智能手环定位器能够提供病人和当值的医生，护士和警察的位置信息，并帮助因受伤，生病或年迈而无法联系的病人。</description>
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/laipac/laipac-s-911bl.png</image-url>
+		<property name="manufacturer" value="Laipac"/>
+	</hardware-asset>
+
+    <!-- Nangle Button -->
+    <hardware-asset id="400" name="医疗紧急呼叫器" sku="NangleButton" device="true">
+        <description>南格应急器可安装于蹲便器和座便器旁合适位置，用于患者发送紧急呼叫信息。大而醒目带有护理特征标识的紧急呼叫键，易辨识，满足紧急情况下易触发要求。</description>
+        <image-url>https://publicblob.blob.core.chinacloudapi.cn/blob1/nangle-button.jpg</image-url>
+        <property name="manufacturer" value="Nangle Tech."/>
+    </hardware-asset>
+
+</hardware-assets>

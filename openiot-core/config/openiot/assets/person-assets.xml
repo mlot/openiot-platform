@@ -1,0 +1,30 @@
+<!--
+  ~ Copyright (c) SiteWhere, LLC. All rights reserved. http://www.sitewhere.com
+  ~
+  ~ The software in this package is published under the terms of the CPAL v1.0
+  ~ license, a copy of which has been included with this distribution in the
+  ~ LICENSE.txt file.
+  -->rson-assets>
+	<person-asset id="1" userName="derek" name="Derek Adams" emailAddress="derek.adams@sitewhere.com">
+		<photo-url>https://s3.amazonaws.com/sitewhere-demo/people/derek.jpg</photo-url>
+		<roles>
+			<role>dev</role>
+		</roles>
+		<property name="phone" value="678-555-1212"/>
+	</person-asset>
+	<person-asset id="2" userName="bryan" name="Bryan Rank" emailAddress="bryan.rank@sitewhere.com">
+		<photo-url>https://s3.amazonaws.com/sitewhere-demo/people/bryan.jpg</photo-url>
+		<roles>
+			<role>techsales</role>
+			<role>dev</role>
+		</roles>
+		<property name="phone" value="770-555-1212"/>
+	</person-asset>
+	<person-asset id="3" userName="martin" name="Martin Cai" emailAddress="mcai@microsoft.com">
+		<photo-url>https://publicblob.blob.core.chinacloudapi.cn/blob1/martin-2.jpg</photo-url>
+		<roles>
+			<role>Senior PM</role>
+		</roles>
+		<property name="phone" value="1391133XXXX"/>
+	</person-asset>
+</person-assets>

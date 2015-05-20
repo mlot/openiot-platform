@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) SiteWhere, LLC. All rights reserved. http://www.sitewhere.com
+  ~
+  ~ The software in this package is published under the terms of the CPAL v1.0
+  ~ license, a copy of which has been included with this distribution in the
+  ~ LICENSE.txt file.
+  -->-suppress ALL -->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:sw="http://www.openiotplatform.com/schema/openiot/ce"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+
+           http://www.openiotplatform.com/schema/openiot/ce http://www.openiotplatform.com/schema/openiot/ce/1.0.2/openiot.xsd">
+
+    <!-- Load property values for substitution -->
+    <context:property-placeholder location="file:${CATALINA_HOME}/conf/openiot/openiot.properties"
+                                  ignore-resource-not-found="true"/>
+
+    <!-- ########################### -->
+    <!-- # SITEWHERE CONFIGURATION # -->
+    <!-- ########################### -->
+    <sw:configuration>
+
+        <!-- ################################# -->
+        <!-- # GLOBAL SERVICES CONFIGURATION # -->
+        <!-- ################################# -->
+        <sw:globals>
+            <!--<sw:hazelcast-configuration configFileLocation="${CATALINA_HOME}/conf/openiot/hazelcast.xml"/>-->
+            <sw:solr-configuration solrServerUrl="http://localhost:8983/solr/openiot"/>
+            <!--<sw:groovy-configuration debug="true" verbose="true"/>-->
+        </sw:globals>
+
+        <!-- ########################### -->
+        <!-- # DATASTORE CONFIGURATION # -->
+        <!-- ########################### -->
+        <sw:datastore>
+
+            <!-- Default MongoDB Datastore -->
+            <sw:mongo-datastore hostname="localhost" port="27017" databaseName="openiot"/>
+
+            <!-- Improves performance by using EHCache to store device management entities -->
+            <sw:ehcache-device-management-cache/>
+
+            <!-- Initializes device model with sample data if datastore is empty -->
+            <sw:default-device-model-initializer/>
+
+            <!-- Initializes user model with sample data if datastore is empty -->
+            <sw:default-user-model-initializer/>
+
+        </sw:datastore>
+
+        <!-- ####################### -->
+        <!-- # DEVICE PROVISIONING # -->
+        <!-- ####################### -->
+        <sw:provisioning>
+
+            <!-- Inbound event sources -->
+            <sw:event-sources>
+
+                <!-- Event source for protobuf messages over AMQP -->
+                <sw:azure-eventhub-event-source sourceId="eventhub" targetFqn="servicebus.chinacloudapi.cn"
+                                                namespace="iot-production-north" entityPath="listen2me" partitionCount="8"
+                                                zkStateStore="127.0.0.1:2181"
+                                                username="cloud" password="tOye+39uMXGdtMpnYPpS18OKC0j63q0/26xr7oI2ato=">
+                    <sw:protobuf-event-decoder/>
+                </sw:azure-eventhub-event-source>
+
+            </sw:event-sources>
+
+            <!-- Inbound Processing Strategy -->
+            <sw:inbound-processing-strategy>
+                <sw:default-inbound-processing-strategy
+                        numEventProcessorThreads="20" enableMonitoring="false" monitoringIntervalSec="3"/>
+            </sw:inbound-processing-strategy>
+
+            <!-- Device registration -->
+            <sw:registration>
+                <sw:default-registration-manager allowNewDevices="true"/>
+            </sw:registration>
+
+            <!-- Batch operation management -->
+            <sw:batch-operations>
+                <sw:default-batch-operation-manager
+                        throttleDelayMs="10000"/>
+            </sw:batch-operations>
+
+            <!-- Device command routing -->
+            <sw:command-routing>
+                <sw:specification-mapping-router defaultDestination="default">
+                </sw:specification-mapping-router>
+            </sw:command-routing>
+
+            <!-- Outbound command destinations -->
+            <sw:command-destinations>
+
+            </sw:command-destinations>
+
+        </sw:provisioning>
+
+        <!-- ############################ -->
+        <!-- # INBOUND PROCESSING CHAIN # -->
+        <!-- ############################ -->
+        <sw:inbound-processing-chain>
+
+            <!-- Store events and delegate to registration manager -->
+            <sw:default-event-storage-processor/>
+
+        </sw:inbound-processing-chain>
+
+        <!-- ############################# -->
+        <!-- # OUTBOUND PROCESSING CHAIN # -->
+        <!-- ############################# -->
+        <sw:outbound-processing-chain>
+
+            <!-- Routes commands for provisioning -->
+            <sw:provisioning-event-processor numThreads="10"/>
+
+        </sw:outbound-processing-chain>
+
+        <!-- #################### -->
+        <!-- # ASSET MANAGEMENT # -->
+        <!-- #################### -->
+        <sw:asset-management>
+
+            <sw:filesystem-device-asset-module/>
+            <sw:filesystem-hardware-asset-module/>
+            <sw:filesystem-person-asset-module/>
+            <sw:filesystem-location-asset-module/>
+
+        </sw:asset-management>
+
+        <!-- ############################# -->
+        <!-- # EXTERNAL SEARCH PROVIDERS # -->
+        <!-- ############################# -->
+        <sw:search-providers>
+
+        </sw:search-providers>
+
+    </sw:configuration>
+
+    <!-- Import beans specific to the given edition -->
+    <import resource="openiot-edition-${openiot.edition}.xml"/>
+
+</beans>

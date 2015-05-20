@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright (c) SiteWhere, LLC. All rights reserved. http://www.sitewhere.com
+  ~
+  ~ The software in this package is published under the terms of the CPAL v1.0
+  ~ license, a copy of which has been included with this distribution in the
+  ~ LICENSE.txt file.
+  -->
+
+<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by Derek A Adams (Derek Adams Consulting Inc.) -->
+<xs:schema targetNamespace="http://www.reveal-tech.com/sitewhere/config" xmlns="http://www.reveal-tech.com/sitewhere/config" xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="sitewhere-configuration">
+		<xs:annotation>
+			<xs:documentation>Root OpenIoT config element.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="configuration-name" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Configuration name</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="configuration-description" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>Configuration description</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="uuid" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

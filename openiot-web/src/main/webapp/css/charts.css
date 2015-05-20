@@ -1,0 +1,94 @@
+/*
+ * Copyright (c) SiteWhere, LLC. All rights reserved. http://www.sitewhere.com
+ *
+ * The software in this package is published under the terms of the CPAL v1.0
+ * license, a copy of which has been included with this distribution in the
+ * LICENSE.txt file.
+ */
+
+
+body {
+    color: #000;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size:13px;
+    direction: ltr;
+}
+
+.space{
+    padding :8px;}
+.sideways{
+    float:left;
+    list-style:none;
+
+
+}
+
+.chart{
+    overflow: hidden;
+    height: 300px;
+}
+.space{
+    padding :8px;}
+.sideways{
+    float:left;
+    list-style:none;
+
+
+}
+.lables{
+    float:left;
+    padding :8px;
+}
+
+.padding{padding :6px;}
+.left{float:left;width:24%;}
+.right{ float:right;width:75%;}
+.box
+{
+    display:block;
+    height:200px;
+    border-left:1px solid blue;
+}
+.cpuborder{
+    border: 1px solid #4599CA; }
+.memoryborder{
+    border: 1px solid #AA51C4; }
+.diskborder{
+    border: 1px solid #85C258; }
+.wlanborder{
+    border: 1px solid #BF7F46; }
+.font  {
+    font-size:10pt;
+}
+.font2  {
+    font-size:10pt;
+}
+.font1{font-size:22px; }
+.pad{
+    color:#8F8F8F;
+}
+.padd{
+    float:right;
+}
+.tpadding{padding-left:60px;
+}
+.tpadding1{padding-left:100px;
+}
+.tpadd{padding-left:80px;
+}
+
+.disd{
+    width:210px;height:80px;margin:0 auto;
+}
+
+.disd:hover
+{
+    background-color: #F7F7F7;
+    border: 1px solid #4599CA;
+}
+
+.top{
+    padding: 6px 0;
+}

@@ -1,0 +1,151 @@
+/*
+ * Copyright (c) SiteWhere, LLC. All rights reserved. http://www.sitewhere.com
+ *
+ * The software in this package is published under the terms of the CPAL v1.0
+ * license, a copy of which has been included with this distribution in the
+ * LICENSE.txt file.
+ */
+package com.openiot.rest.model.device.event.request;
+
+import com.openiot.rest.model.device.event.DeviceCommandInvocation;
+import com.openiot.spi.device.event.CommandInitiator;
+import com.openiot.spi.device.event.CommandStatus;
+import com.openiot.spi.device.event.CommandTarget;
+import com.openiot.spi.device.event.request.IDeviceCommandInvocationCreateRequest;
+
+import java.io.Serializable;
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ * Model object used to create a new {@link DeviceCommandInvocation} via REST APIs.
+ * 
+ * @author Derek
+ */
+public class DeviceCommandInvocationCreateRequest extends DeviceEventCreateRequest implements
+		IDeviceCommandInvocationCreateRequest, Serializable {
+
+	/** Serialization version identifier */
+	private static final long serialVersionUID = 8638261326864469204L;
+
+	/** Type of actor that initiated the command */
+	private CommandInitiator initiator;
+
+	/** Id of actor that initiated the command */
+	private String initiatorId;
+
+	/** Type of actor that will receive the command */
+	private CommandTarget target;
+
+	/** Id of actor that will receive the command */
+	private String targetId;
+
+	/** Token of command to be invoked */
+	private String commandToken;
+
+	/** Values to use for command parameters */
+	private Map<String, String> parameterValues = new HashMap<String, String>();
+
+	/** Current invocation status */
+	private CommandStatus status;
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see IDeviceCommandInvocationCreateRequest#
+	 * getInitiator()
+	 */
+	public CommandInitiator getInitiator() {
+		return initiator;
+	}
+
+	public void setInitiator(CommandInitiator initiator) {
+		this.initiator = initiator;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see IDeviceCommandInvocationCreateRequest#
+	 * getInitiatorId()
+	 */
+	public String getInitiatorId() {
+		return initiatorId;
+	}
+
+	public void setInitiatorId(String initiatorId) {
+		this.initiatorId = initiatorId;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * IDeviceCommandInvocationCreateRequest#getTarget
+	 * ()
+	 */
+	public CommandTarget getTarget() {
+		return target;
+	}
+
+	public void setTarget(CommandTarget target) {
+		this.target = target;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see IDeviceCommandInvocationCreateRequest#
+	 * getTargetId()
+	 */
+	public String getTargetId() {
+		return targetId;
+	}
+
+	public void setTargetId(String targetId) {
+		this.targetId = targetId;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see IDeviceCommandInvocationCreateRequest#
+	 * getCommandToken()
+	 */
+	public String getCommandToken() {
+		return commandToken;
+	}
+
+	public void setCommandToken(String commandToken) {
+		this.commandToken = commandToken;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see IDeviceCommandInvocationCreateRequest#
+	 * getParameterValues()
+	 */
+	public Map<String, String> getParameterValues() {
+		return parameterValues;
+	}
+
+	public void setParameterValues(Map<String, String> parameterValues) {
+		this.parameterValues = parameterValues;
+	}
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see
+	 * IDeviceCommandInvocationCreateRequest#getStatus
+	 * ()
+	 */
+	public CommandStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(CommandStatus status) {
+		this.status = status;
+	}
+}

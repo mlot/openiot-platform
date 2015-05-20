@@ -1,0 +1,21 @@
+<!--
+  ~ Copyright (c) SiteWhere, LLC. All rights reserved. http://www.sitewhere.com
+  ~
+  ~ The software in this package is published under the terms of the CPAL v1.0
+  ~ license, a copy of which has been included with this distribution in the
+  ~ LICENSE.txt file.
+  -->
+
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+	<persistence-unit name="com.openiot" transaction-type="RESOURCE_LOCAL">
+		<class>com.openiot.dao.device.jpa.Device</class>
+		<class>com.openiot.dao.device.jpa.DeviceAssignment</class>
+		<class>com.openiot.dao.device.jpa.Site</class>
+		<class>com.openiot.dao.user.User</class>
+		<class>com.openiot.dao.user.Group</class>
+		<class>com.openiot.dao.user.GrantedAuthority</class>
+	</persistence-unit>
+</persistence>

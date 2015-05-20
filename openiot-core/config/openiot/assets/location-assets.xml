@@ -1,0 +1,14 @@
+<!--
+  ~ Copyright (c) SiteWhere, LLC. All rights reserved. http://www.sitewhere.com
+  ~
+  ~ The software in this package is published under the terms of the CPAL v1.0
+  ~ license, a copy of which has been included with this distribution in the
+  ~ LICENSE.txt file.
+  -->cation-assets>
+	<location-asset id="1" name="Tool Storage Container" lat="33.7550" lon="-84.3900" elevation="0">
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/toolbox.png</image-url>
+	</location-asset>
+	<location-asset id="2" name="Construction Trailer" lat="33.7550" lon="-84.3900" elevation="0">
+		<image-url>https://s3.amazonaws.com/sitewhere-demo/construction/trailer.jpg</image-url>
+	</location-asset>
+</location-assets>

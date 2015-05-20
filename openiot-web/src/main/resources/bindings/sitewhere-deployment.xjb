@@ -1,0 +1,18 @@
+<!--
+  ~ Copyright (c) SiteWhere, LLC. All rights reserved. http://www.sitewhere.com
+  ~
+  ~ The software in this package is published under the terms of the CPAL v1.0
+  ~ license, a copy of which has been included with this distribution in the
+  ~ LICENSE.txt file.
+  -->
+
+<jxb:bindings version="1.0" xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+        >
+
+	<jxb:bindings schemaLocation="../schemas/sitewhere-deployment.xsd" node="/xs:schema">
+		<jxb:schemaBindings>
+			<jxb:package name="com.openiot.config.deployment" />
+		</jxb:schemaBindings>
+	</jxb:bindings>
+
+</jxb:bindings>

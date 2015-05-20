@@ -1,0 +1,28 @@
+<!--
+  ~ Copyright (c) SiteWhere, LLC. All rights reserved. http://www.sitewhere.com
+  ~
+  ~ The software in this package is published under the terms of the CPAL v1.0
+  ~ license, a copy of which has been included with this distribution in the
+  ~ LICENSE.txt file.
+  -->
+
+<project name="Generate Version Files" default="generate-versions" basedir=".">
+
+	<description>
+		Generates version files that allow version information to be used in code.
+	</description>
+
+	<target name="generate-versions">
+		<property name="generated.src.dir" location="${basedir}/target/generated-sources" />
+		<copy file="${basedir}/template/Version.java" 
+			toFile="${generated.src.dir}/com/openiot/Version.java" />
+		<tstamp>
+			<format property="build.timestamp" pattern="yyyyMMddHHmmss" />
+		</tstamp>
+		<replace file="${generated.src.dir}/com/openiot/Version.java">
+			<replacefilter token="@version.identifier@" value="${project.version}" />
+			<replacefilter token="@build.timestamp@" value="${build.timestamp}" />
+		</replace>
+	</target>
+
+</project>
